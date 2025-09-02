@@ -3,6 +3,7 @@
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { ACTIONS } from "../data";
 
 export default function Page() {
   useEffect(() => {
@@ -52,8 +53,8 @@ export default function Page() {
 
         <div className="mx-auto mt-8 sm:mt-10 w-full max-w-2xl rounded-2xl border border-white/40 bg-white/60 p-4 sm:p-6 shadow-xl backdrop-blur" data-aos="fade-up" data-aos-delay="150">
           <div className="grid gap-3 sm:gap-4">
-            {[{title:"Deped Email Creation"},{title:"Resetting Deped Email Password",delay:50},{title:"Resetting DPDS Password",delay:100},{title:"Resetting 365 Email Password",delay:150}].map((item,idx) => (
-              <a key={idx} href="#" className="group inline-flex w-full items-center justify-between rounded-xl bg-gradient-to-r from-[#1f5fa8] to-[#0e7ad6] px-4 sm:px-5 py-3.5 sm:py-4 text-white text-base sm:text-lg shadow hover:from-[#1c589c] hover:to-[#0d6ebe] active:from-[#184f8d] active:to-[#0c66b1] transition-all" data-aos="fade-up" data-aos-delay={item.delay || 0}>
+            {ACTIONS.map((item,idx) => (
+              <a key={idx} href={item.href} target="_blank" rel="noopener noreferrer" className="group inline-flex w-full items-center justify-between rounded-xl bg-gradient-to-r from-[#1f5fa8] to-[#0e7ad6] px-4 sm:px-5 py-3.5 sm:py-4 text-white text-base sm:text-lg shadow hover:from-[#1c589c] hover:to-[#0d6ebe] active:from-[#184f8d] active:to-[#0c66b1] transition-all" data-aos="fade-up" data-aos-delay={item.delay || 0}>
                 <span className="flex items-center gap-3">
                   <span className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-white/20 ring-1 ring-white/30">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4h16v16H4z"/><path d="m22 6-10 7L2 6"/></svg>
