@@ -1,0 +1,42 @@
+/* Custom styles for index.html only */
+
+/* Serif heading font */
+.font-serif-hero {
+  font-family: 'Merriweather', ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+}
+
+/* Blinking cursor for typewriter */
+@keyframes blink {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+
+.animate-blink {
+  animation: blink 1s step-start infinite;
+}
+
+.bg-image {
+  background-image: url("public/Untitled design.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Mobile view: remove image, use solid color */
+@media (max-width: 640px) { /* Tailwind's sm breakpoint */
+  .bg-image {
+    background-image: none;
+    background-color: #b4e3f1;
+  }
+  body, html {
+    height: 100%;
+  }
+  body.bg-image {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  main {
+    flex-grow: 1;
+  }
+}
