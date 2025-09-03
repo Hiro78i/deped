@@ -29,3 +29,43 @@ html, body, :root { height: 100%; }
   body.bg-image { display: flex; flex-direction: column; min-height: 100vh; }
   main { flex-grow: 1; }
 }
+
+/* Enhanced mobile responsiveness */
+@media (max-width: 480px) {
+  .font-serif-hero {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+  
+  main {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  
+  .bg-image {
+    background-color: #b4e3f1;
+  }
+}
+
+/* Tablet responsiveness */
+@media (min-width: 641px) and (max-width: 1024px) {
+  main {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+/* Ensure buttons are touch-friendly on mobile */
+@media (max-width: 640px) {
+  a[href*="docs.google.com"] {
+    min-height: 3.5rem;
+    padding: 1rem;
+  }
+  
+  .font-serif-hero {
+    font-size: 1.75rem;
+    line-height: 2.25rem;
+  }
+}
