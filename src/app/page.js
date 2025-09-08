@@ -47,7 +47,7 @@ export default function Page() {
       {/* Main */}
       <main className="relative mx-auto max-w-6xl px-3 sm:px-4 py-10 sm:py-14 pb-24 sm:pb-28">
         <h1 className="text-center font-serif-hero text-2xl sm:text-4xl md:text-5xl font-semibold tracking-wide" data-aos="fade-up">
-          <span id="typewriter" data-text="How we can help you Ma’am / Sir?"></span>
+          <span id="typewriter" data-text="How can we help you Ma’am / Sir?"></span>
           <span className="animate-blink">|</span>
         </h1>
 
@@ -87,5 +87,6 @@ export default function Page() {
     </>
   );
 }
+
 
 
